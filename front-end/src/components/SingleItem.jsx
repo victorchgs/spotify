@@ -1,5 +1,6 @@
-import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const SingleItem = ({ _id, name, image, banner, artist, idPath }) => {

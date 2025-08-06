@@ -1,12 +1,14 @@
-import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { Link, useParams } from "react-router-dom";
+import SongList from "../components/SongList";
 import { artistArray } from "../assets/database/artists";
 import { songsArray } from "../assets/database/songs";
-import SongList from "../components/SongList";
 
 const Artist = () => {
   const { id } = useParams();
+  // console.log(useParams());
 
   const { name, banner } = artistArray.filter(
     (currentArtistObj) => currentArtistObj._id === id
@@ -20,6 +22,12 @@ const Artist = () => {
     Math.random() * (songsArrayFromArtist.length - 1)
   );
   const randomIdFromArtist = songsArrayFromArtist[randomIndex]._id;
+
+  // console.log(randomIdFromArtist);
+  // console.log(Math.floor(Math.random() * (songsArrayFromArtist.length - 1)));
+  // console.log("Tamanho do Array:" + songsArrayFromArtist.length);
+
+  // console.log(songsArrayFromArtist);
 
   return (
     <div className="artist">

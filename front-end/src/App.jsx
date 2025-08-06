@@ -1,10 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
 import Header from "./components/Header";
-import Artist from "./pages/Artist";
-import Artists from "./pages/Artists";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Song from "./pages/Song";
+import Artists from "./pages/Artists";
+import Artist from "./pages/Artist";
 import Songs from "./pages/Songs";
+import Song from "./pages/Song";
 
 const App = () => {
   return (
